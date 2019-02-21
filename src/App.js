@@ -6,6 +6,8 @@ import TreeView from './components/TreeView';
 import valueStreamStore from './services/ValueStreamStore';
 import ImportJson from './components/ImportJson';
 import ExportJson from './components/ExportJson';
+import TreeViewOptions from './components/TreeViewOptions';
+
 import DEFAULT_JSON from './value-stream-default.json';
 
 class App extends Component {
@@ -15,6 +17,9 @@ class App extends Component {
     // should get initial from localStorage OR default
     this.state = {
       jsonData: undefined,
+      treeViewOptions: {
+        depth: 3,
+      },
     }
   }
 
@@ -27,6 +32,15 @@ class App extends Component {
         console.info('using default jsonData');
         this.setState({ jsonData: DEFAULT_JSON });
       }
+    });
+  }
+
+  onTreeDepthChange(value) {
+    console.log('onTreeDepthChange------', value);
+    this.setState({
+      treeViewOptions: {
+        depth: value,
+      },
     });
   }
 
@@ -52,8 +66,9 @@ class App extends Component {
         { this.state.jsonData &&  <div className="container">
           <section>
             <h2>Value stream graph</h2>
+            <TreeViewOptions depth={{value: this.state.treeViewOptions.depth, onChange: (v) => this.onTreeDepthChange(v) }}/>
             { this.state.jsonData &&
-              <TreeView jsonData={this.state.jsonData} initialDepth={3} zoom={0.7}/>
+              <TreeView jsonData={this.state.jsonData} initialDepth={this.state.treeViewOptions.depth} zoom={0.7}/>
             }
           </section>
 

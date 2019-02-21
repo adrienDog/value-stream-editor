@@ -9,6 +9,7 @@ const scoreToColor = [
   'red',
   'red',
   'orange',
+  'orange',
   'green',
   'green',
 ];
@@ -38,7 +39,13 @@ class NodeLabel extends React.PureComponent {
 }
 
 export default class TreeView extends React.Component {
-  state = {}
+  constructor(props) {
+    super(props);
+    this.state = {
+      initialDepth: props.initialDepth,
+      refreshing: false,
+    }
+  }
 
   componentDidMount() {
     const dimensions = this.treeContainer.getBoundingClientRect();
@@ -50,7 +57,22 @@ export default class TreeView extends React.Component {
     });
   }
 
+  static getDerivedStateFromProps(props, state) {
+    if (props.initialDepth === state.initialDepth) {
+      console.log('props and state have same depth, state:', state);
+      return state.refreshing ? {...state, refreshing: false} : null
+    } else if (!state.refreshing) {
+      console.log('props and state have DIFFERENT depth, state:', state);
+      return { ...state, refreshing: true, initialDepth: props.initialDepth};
+    } else {
+      return { ...state, refreshing: false};
+    }
+  }
+
   render() {
+    console.log('TreeView this.props.initialDepth', this.props.initialDepth);
+    console.log('TreeView this.state.initialDepth', this.state.initialDepth);
+    console.log('TreeView this.state.refreshing', this.state.refreshing);
     /* <Tree /> will fill width/height of its container; in this case `#treeWrapper` */
     return (
       <div
@@ -58,11 +80,11 @@ export default class TreeView extends React.Component {
         ref={tc => (this.treeContainer = tc)}
         style={{width: '100%', height: '40em', border: 'solid #d3d3d3 1px'}}
       >
-        <Tree
+        {!this.state.refreshing && <Tree
           data={this.props.jsonData}
           translate={this.state.translate}
           onClick={(e) => console.log(e)}
-          initialDepth={this.props.initialDepth}
+          initialDepth={this.state.initialDepth}
           nodeSize={{x: 200, y: 100}}
           zoom={this.props.zoom}
           allowForeignObjects
@@ -94,7 +116,7 @@ export default class TreeView extends React.Component {
               },
             },
           }}
-        />
+        />}
 
       </div>
     );
