@@ -46,32 +46,44 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <h1>Value Stream Editor</h1>
         </header>
 
         { this.state.jsonData &&  <div className="container">
           <section>
+            <h2>Value stream graph</h2>
             { this.state.jsonData &&
-              <TreeView jsonData={this.state.jsonData} initialDepth={3}/>
+              <TreeView jsonData={this.state.jsonData} initialDepth={3} zoom={0.7}/>
             }
           </section>
 
           <section className="container"
             style={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'center',
               padding: '10px 0'
             }}
           >
-            <div style={{ flex: '1' }}>
-              <ImportJson onFileReady={(f) => this.handleJsonImport(f)}/>
-            </div>
-            <div style={{ flex: '1' }}>
-              <ExportJson jsonData={this.state.jsonData} fileName={'value-stream'}/>
-            </div>
-          </section>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                padding: '10px 0'
+              }}
+            >
+              <h2 style={{ flex: '1' }}>
+                Edit JSON
+              </h2>
+              <div style={{ flex: '1' }}>
+                <h3>Import .json</h3>
+                <ImportJson onFileReady={(f) => this.handleJsonImport(f)}/>
+              </div>
+              <div style={{ flex: '1' }}>
+                <h3>Export .json</h3>
+                <ExportJson jsonData={this.state.jsonData} fileName={'value-stream'}/>
+              </div>
 
-          <section style={{ maxHeight: '200px' }}>
+
+            </div>
             <ValueStreamEditor
               jsonData={this.state.jsonData}
               onChange={(e) => this.onValueStreamChange(e.dataPoint)}

@@ -31,7 +31,6 @@ export default class ImportJson extends Component {
   render() {
     return (
       <div>
-        <label htmlFor="jsonFileImport">Import JSON</label>
         <input type="file" name="jsonFileImport" id="" onChange={this.handleSelectedFile} />
       </div>
     )

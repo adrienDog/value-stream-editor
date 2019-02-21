@@ -11,7 +11,11 @@ class JSONEditor extends React.Component {
   }
 
   onJsonChanged(editorContent) {
-    this.props.onChange({ target: { value: editorContent.jsObject } });
+    if (!editorContent.error) {
+      this.props.onChange({ target: { value: editorContent.jsObject } });
+    } else {
+      console.error('json is invalid', editorContent.error);
+    }
   }
 
   style() {
