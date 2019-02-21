@@ -51,7 +51,7 @@ export default class TreeView extends React.Component {
     const dimensions = this.treeContainer.getBoundingClientRect();
     this.setState({
       translate: {
-        x: dimensions.width / 4,
+        x: 20,
         y: dimensions.height / 2
       }
     });

@@ -1,0 +1,94 @@
+version: 2
+jobs:
+  test:
+    working_directory: ~/value-stream-editor
+    docker:
+      - image: circleci/node:11.4.0
+    steps:
+      - attach_workspace:
+          at: ~/value-stream-editor
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Run tests
+          command: CI=true npm test
+      - persist_to_workspace:
+          root: .
+          paths:
+            - '*'
+
+  build:
+    working_directory: ~/value-stream-editor
+    docker:
+      - image: circleci/node:11.4.0
+    steps:
+      - attach_workspace:
+          at: ~/value-stream-editor
+      - run:
+          name: Build
+          command: npm run build
+      - store_artifacts:
+          path: ./value-stream-editor/build/
+      - persist_to_workspace:
+          root: .
+          paths:
+            - '*'
+
+  publish:
+    working_directory: ~/value-stream-editor
+    docker:
+      - image: circleci/python:3.6.4
+    steps:
+      - attach_workspace:
+          at: ~/value-stream-editor
+      - run:
+          name: Install aws cli
+          command: |
+            pip install awscli --upgrade --user
+            echo 'export PATH=~/.local/bin/:$PATH' >> $BASH_ENV
+      - run:
+          name: Push to s3
+          command: S3_BUCKET=s3://value-stream-editor bash ./scripts/push-to-s3.sh
+      # - run:
+      #     name: Invalidate Cloudfront cache
+      #     command: CLOUFRONT_DISTRIBUTION=E1CAYLNGIDU7MC bash ./scripts/invalidate-cloudfront.sh
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test:
+          filters:
+            branches:
+              ignore:
+                - master
+
+  test_build_and_publish:
+    jobs:
+      - test:
+          filters:
+            branches:
+              only:
+                - master
+      - build:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
+      - publish:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master

@@ -8,7 +8,7 @@ export default class TreeDepthPicker extends Component {
     return (
       <Slider
         min={0}
-        max={10}
+        max={9}
         step={1}
         value={this.props.value}
         valueReducer={(v) => this.props.onChange(Math.round(v))}
