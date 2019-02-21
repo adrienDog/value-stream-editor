@@ -1,0 +1,416 @@
+[
+  {
+    "name": "value stream root",
+    "attributes": {},
+    "children": [
+      {
+        "name": "developer value stream",
+        "attributes": {},
+        "children": [
+          {
+            "name": "developer brings value to production fast",
+            "attributes": {},
+            "children": [
+              {
+                "name": "developer is skilled",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "developer is pushed to improve their skills",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "resources are shared and made available",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "excellence and self-improvement are valued",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "developer is safe to try and fail",
+                    "attributes": {},
+                    "children": []
+                  },
+                  {
+                    "name": "developer is mentored and surrounded by skilled peers",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "company is skilled",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "team is skilled",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "developer’s development is fostered and monitored",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "existing code is easy to evolve",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "code is familiar",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "code has been worked/paired on",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "base principles, patterns are known and shared",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "code is readable",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "delivery pipeline is fast",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "test suite is fast",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "test pyramid is applied",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "codebase is small enough",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "peer/code reviews are fast",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "team is aligned",
+                        "attributes": {},
+                        "children": [
+                          {
+                            "name": "team is aligned on HOW to build",
+                            "attributes": {},
+                            "children": [
+                              {
+                                "name": "clear guidelines about the base technical expectations",
+                                "attributes": {},
+                                "children": []
+                              },
+                              {
+                                "name": "clear guidelines about collaboration expectations: siloed? pairing?",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "team is aligned on WHAT to build",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "team communicates effectively, efficiently",
+                        "attributes": {},
+                        "children": [
+                          {
+                            "name": "teammates trust eachother",
+                            "attributes": {},
+                            "children": []
+                          },
+                          {
+                            "name": "teammates share common knowledge and vocabulary",
+                            "attributes": {},
+                            "children": [
+                              {
+                                "name": "ubiquitous Language from DDD",
+                                "attributes": {},
+                                "children": []
+                              },
+                              {
+                                "name": "team & product knowledge is available and fluid",
+                                "attributes": {},
+                                "children": []
+                              },
+                              {
+                                "name": "team knows common professional vocabulary and patterns",
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "name": "team is skilled",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "developer is not scared to break things 'badly'",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "product knowledge is sufficient for self-reassuring",
+                        "attributes": {},
+                        "children": [
+                          {
+                            "name": "team & product knowledge is available and fluid",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "peer reviews guide and give confidence",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "test coverage is sufficient",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "monitoring allows fast detection of failure",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "developer is undisturbed, able to focus",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "unexpected necessary work is inexistant",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "previous problems are solved",
+                        "attributes": {},
+                        "children": [
+                          {
+                            "name": "test coverage is sufficient",
+                            "attributes": {},
+                            "children": []
+                          },
+                          {
+                            "name": "monitoring allows fast detection of failure",
+                            "attributes": {},
+                            "children": []
+                          },
+                          {
+                            "name": "definition of Done was correct for previous tasks",
+                            "attributes": {},
+                            "children": []
+                          },
+                          {
+                            "name": "previous tasks were closed according to definition of Done",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "SLAs are complied with (system is stable)",
+                        "attributes": {},
+                        "children": [
+                          {
+                            "name": "system is reliable",
+                            "attributes": {},
+                            "children": [
+                              {
+                                "name": "auto-recovery/self-heal mechanisms",
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "name": "k8s",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "underlying systems are reliable",
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "name": "infra is reliable",
+                                    "attributes": {},
+                                    "children": [
+                                      {
+                                        "name": "AWS",
+                                        "attributes": {},
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "system can handle the anticipated volume",
+                            "attributes": {},
+                            "children": [
+                              {
+                                "name": "team is aware of anticipated volume",
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "name": "team communicates well and is product oriented",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "team monitors the system and analyses against volume anticipations",
+                                "attributes": {},
+                                "children": []
+                              },
+                              {
+                                "name": "team has taken necessary actions to allow the system to handle anticipations",
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "name": "team is skilled",
+                                    "attributes": {},
+                                    "children": []
+                                  },
+                                  {
+                                    "name": "company is skilled",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "environment fits the individual's ideal productive environment",
+                    "attributes": {
+                      "tags": "#individual"
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "individual's mind is free of noise and toxic thoughts",
+                    "attributes": {
+                      "tags": "#individual #lead #culture"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "idea generation process is fast",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "individual is skilled",
+                    "attributes": {},
+                    "children": []
+                  },
+                  {
+                    "name": "feedback loop exists, is useful and fast",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "team communicates effectively, efficiently",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "discussion is wanted when perceived beneficial",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "team is aligned",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "developer is driven, motivated",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "individual is understood and mentored to grow",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "lead has enough time and dedication",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "individual wants continuous improvement and responds well to feedback",
+                        "attributes": {
+                          "tags": "#hiring"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "developer builds correct solution",
+            "attributes": {},
+            "children": []
+          },
+          {
+            "name": "developer does not break live solutions",
+            "attributes": {},
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

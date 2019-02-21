@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "downloadjs": "^1.4.7",
     "react": "^16.8.2",
+    "react-d3-tree": "^1.12.2",
     "react-dom": "^16.8.2",
+    "react-json-editor-ajrm": "^2.5.9",
     "react-scripts": "2.1.5"
   },
   "scripts": {
