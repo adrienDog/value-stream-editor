@@ -1,6 +1,6 @@
 [
   {
-    "name": "value stream root",
+    "name": "value stream",
     "attributes": {},
     "children": [
       {
@@ -17,24 +17,69 @@
                 "children": [
                   {
                     "name": "developer is pushed to improve their skills",
-                    "attributes": {},
+                    "attributes": {
+                      "score": 1
+                    },
                     "children": [
                       {
                         "name": "resources are shared and made available",
-                        "attributes": {},
-                        "children": []
+                        "attributes": {
+                          "score": 3
+                        },
+                        "children": [
+                          {
+                            "name": "within the team",
+                            "attributes": {
+                              "score": 2
+                            },
+                            "children": []
+                          },
+                          {
+                            "name": "within the company",
+                            "attributes": {
+                              "score": 4
+                            },
+                            "children": []
+                          }
+                        ]
                       },
                       {
-                        "name": "excellence and self-improvement are valued",
-                        "attributes": {},
+                        "name": "excellence and self-improvement are valued and asked",
+                        "attributes": {
+                          "score": 1
+                        },
                         "children": []
                       }
                     ]
                   },
                   {
-                    "name": "developer is safe to try and fail",
+                    "name": "developer is safe to try, fail and learn",
                     "attributes": {},
-                    "children": []
+                    "children": [
+                      {
+                        "name": "system is protected against major bugs",
+                        "attributes": {
+                          "score": 3
+                        },
+                        "children": [
+                          {
+                            "name": "system is monitored efficiently",
+                            "attributes": {},
+                            "children": []
+                          },
+                          {
+                            "name": "system is tested enough",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "team spirit fits that model",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
                   },
                   {
                     "name": "developer is mentored and surrounded by skilled peers",
@@ -64,6 +109,17 @@
                 "attributes": {},
                 "children": [
                   {
+                    "name": "code is written with basic design principles in mind",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "team is skilled",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
                     "name": "code is familiar",
                     "attributes": {},
                     "children": [
@@ -74,6 +130,11 @@
                       },
                       {
                         "name": "base principles, patterns are known and shared",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "team is aligned",
                         "attributes": {},
                         "children": []
                       }
@@ -337,7 +398,55 @@
                     "attributes": {
                       "tags": "#individual #lead #culture"
                     },
-                    "children": []
+                    "children": [
+                      {
+                        "name": "individual feels they are treated fairly",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "individual feels they are valued",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "individual does not feel alone",
+                        "attributes": {},
+                        "children": [
+                          {
+                            "name": "team is aligned",
+                            "attributes": {},
+                            "children": []
+                          },
+                          {
+                            "name": "team communicates",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "individual does not feel conflicted",
+                        "attributes": {},
+                        "children": [
+                          {
+                            "name": "individual has freedom to do what they were hired for",
+                            "attributes": {},
+                            "children": []
+                          },
+                          {
+                            "name": "individual understands and agrees with the reasons why they are limited in their freedom and how to fix it",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "individual is allowed to take time to fix personal problems",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
                   }
                 ]
               },
@@ -378,6 +487,27 @@
                 "attributes": {},
                 "children": [
                   {
+                    "name": "individual believes in the mission",
+                    "attributes": {},
+                    "children": []
+                  },
+                  {
+                    "name": "individual feels their work is useful for the mission",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "individual is close to the customer, feels their pain and joy",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "individual is involved in the Product Development",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
                     "name": "individual is understood and mentored to grow",
                     "attributes": {},
                     "children": [
@@ -402,7 +532,82 @@
           {
             "name": "developer builds correct solution",
             "attributes": {},
-            "children": []
+            "children": [
+              {
+                "name": "definition of Done is correct",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "the customer problem is understood deeply",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "individual has sufficient knowledge of the current product",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "individual has sufficient knowledge of the domain",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "individual is close to the customer",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "the new behaviour to fix the customer problem is clear",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "individual has sufficient knowledge of the current product",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "individual has sufficient knowledge of the domain",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "individual is close to the customer",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "scope of tasks to reach definition of Done is complete",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "sufficient effort and discussion are put into defining",
+                    "attributes": {},
+                    "children": []
+                  },
+                  {
+                    "name": "individual has sufficient knowledge of the current system",
+                    "attributes": {},
+                    "children": []
+                  },
+                  {
+                    "name": "individual has sufficient professional knowledge",
+                    "attributes": {},
+                    "children": []
+                  },
+                  {
+                    "name": "individual can self-assess if they need external advice and asks",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "developer does not break live solutions",
