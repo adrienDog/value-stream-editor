@@ -66,6 +66,7 @@ class App extends Component {
         { this.state.jsonData &&  <div className="container">
           <section>
             <h2>Value stream graph</h2>
+            <p>Click on node to expand or adjust depth with slider.</p>
             <TreeViewOptions depth={{value: this.state.treeViewOptions.depth, onChange: (v) => this.onTreeDepthChange(v) }}/>
             { this.state.jsonData &&
               <TreeView jsonData={this.state.jsonData} initialDepth={this.state.treeViewOptions.depth} zoom={0.7}/>
