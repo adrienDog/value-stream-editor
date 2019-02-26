@@ -8,7 +8,7 @@ import ImportJson from './components/ImportJson';
 import ExportJson from './components/ExportJson';
 import TreeViewOptions from './components/TreeViewOptions';
 
-import DEFAULT_JSON from './value-stream-default.json';
+import DEFAULT_JSON from './value-stream.json';
 
 class App extends Component {
   constructor(props) {

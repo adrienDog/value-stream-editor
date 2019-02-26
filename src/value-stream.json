@@ -8,7 +8,7 @@
         "attributes": {},
         "children": [
           {
-            "name": "developer brings value to production fast",
+            "name": "developer brings solution to production fast",
             "attributes": {},
             "children": [
               {
@@ -129,9 +129,32 @@
                         "children": []
                       },
                       {
+                        "name": "context owned by codebase is small enough and has high cohesion",
+                        "attributes": {},
+                        "children": [
+                          {
+                            "name": "system is split between different services that have high cohesion and are losely coupled",
+                            "attributes": {},
+                            "children": [
+                              {
+                                "name": "team is skilled",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
                         "name": "base principles, patterns are known and shared",
                         "attributes": {},
-                        "children": []
+                        "children": [
+                          {
+                            "name": "team is skilled",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
                       },
                       {
                         "name": "team is aligned",
@@ -152,8 +175,46 @@
                 "attributes": {},
                 "children": [
                   {
-                    "name": "test suite is fast",
+                    "name": "delivery pipeline is automated",
                     "attributes": {},
+                    "children": [
+                      {
+                        "name": "Continuous Integration: automatically build new deployables by integrating new code into production code",
+                        "attributes": {
+                          "tags": "#CI #read #learn",
+                          "score": 4,
+                          "notes": [
+                            "Many books and articles have been written about CI, here is not the place to develop the value stream of CI"
+                          ]
+                        },
+                        "children": []
+                      },
+                      {
+                        "name": "Continuous Delivery: continuously deploy new deployable",
+                        "attributes": {
+                          "tags": "#CD #k8s",
+                          "score": 4,
+                          "notes": [
+                            "Many books and articles have been written about CD, here is not the place to develop the value stream of CI"
+                          ]
+                        },
+                        "children": [
+                          {
+                            "name": "Continuous Delivery: System can do rolling deployments automatically",
+                            "attributes": {
+                              "tags": "#CD #k8s"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "test suite is fast",
+                    "attributes": {
+                      "score": 1
+                    },
                     "children": [
                       {
                         "name": "test pyramid is applied",
@@ -161,9 +222,25 @@
                         "children": []
                       },
                       {
-                        "name": "codebase is small enough",
-                        "attributes": {},
-                        "children": []
+                        "name": "context owned by codebase is small enough and has high cohesion",
+                        "attributes": {
+                          "score": 1
+                        },
+                        "children": [
+                          {
+                            "name": "system is split between different services that have high cohesion and are losely coupled",
+                            "attributes": {
+                              "score": 1
+                            },
+                            "children": [
+                              {
+                                "name": "team is skilled",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
                       }
                     ]
                   },
@@ -549,7 +626,18 @@
                       {
                         "name": "individual has sufficient knowledge of the domain",
                         "attributes": {},
-                        "children": []
+                        "children": [
+                          {
+                            "name": "team works hard on DISCOVERY of the domain",
+                            "attributes": {},
+                            "children": []
+                          },
+                          {
+                            "name": "team works hard on DELIVERY of the new domain knowledge to everyone",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
                       },
                       {
                         "name": "individual is close to the customer",
@@ -601,9 +689,52 @@
                     "children": []
                   },
                   {
-                    "name": "individual can self-assess if they need external advice and asks",
+                    "name": "individual can get external advice if needed",
                     "attributes": {},
-                    "children": []
+                    "children": [
+                      {
+                        "name": "individual can realistically self-assess if their expertise is sufficient for the task at hand",
+                        "attributes": {},
+                        "children": [
+                          {
+                            "name": "individual is pushed to question themselves, learn and self-improve",
+                            "attributes": {},
+                            "children": []
+                          },
+                          {
+                            "name": "individual digs deep enough into the problem",
+                            "attributes": {},
+                            "children": [
+                              {
+                                "name": "individual has a natural problem solving mindset",
+                                "attributes": {},
+                                "children": []
+                              },
+                              {
+                                "name": "team values proper DISCOVERY (problem solving)",
+                                "attributes": {},
+                                "children": []
+                              },
+                              {
+                                "name": "team does not over emphasize DELIVERY over DISCOVERY",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "company is skilled",
+                        "attributes": {},
+                        "children": []
+                      },
+                      {
+                        "name": "team is skilled",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
                   }
                 ]
               }
@@ -612,7 +743,42 @@
           {
             "name": "developer does not break live solutions",
             "attributes": {},
-            "children": []
+            "children": [
+              {
+                "name": "context owned by codebase is small enough and has high cohesion",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "system is split between different services that have high cohesion and are losely coupled",
+                    "attributes": {
+                      "score": 1
+                    },
+                    "children": [
+                      {
+                        "name": "team is skilled",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "developer is prevented from deploying a non-working version of the code",
+                "attributes": {},
+                "children": []
+              },
+              {
+                "name": "developer is alerted when production systems are not behaving as expected",
+                "attributes": {},
+                "children": []
+              },
+              {
+                "name": "production systems can self-heal",
+                "attributes": {},
+                "children": []
+              }
+            ]
           }
         ]
       }
