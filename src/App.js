@@ -7,6 +7,7 @@ import valueStreamStore from './services/ValueStreamStore';
 import ImportJson from './components/ImportJson';
 import ExportJson from './components/ExportJson';
 import TreeViewOptions from './components/TreeViewOptions';
+import Intro from './components/Intro';
 
 import DEFAULT_JSON from './value-stream.json';
 
@@ -18,7 +19,7 @@ class App extends Component {
     this.state = {
       jsonData: undefined,
       treeViewOptions: {
-        depth: 3,
+        depth: 2,
       },
     }
   }
@@ -36,7 +37,6 @@ class App extends Component {
   }
 
   onTreeDepthChange(value) {
-    console.log('onTreeDepthChange------', value);
     this.setState({
       treeViewOptions: {
         depth: value,
@@ -63,10 +63,16 @@ class App extends Component {
           <h1>Value Stream Editor</h1>
         </header>
 
+        <div className="container">
+          <section>
+            <Intro/>
+          </section>
+        </div>
+
         { this.state.jsonData &&  <div className="container">
           <section>
             <h2>Value stream graph</h2>
-            <p>Click on node to expand or adjust depth with slider.</p>
+            <p>Click on the nodes to dive deeper or adjust the depth with the slider.</p>
             <TreeViewOptions depth={{value: this.state.treeViewOptions.depth, onChange: (v) => this.onTreeDepthChange(v) }}/>
             { this.state.jsonData &&
               <TreeView jsonData={this.state.jsonData} initialDepth={this.state.treeViewOptions.depth} zoom={0.7}/>

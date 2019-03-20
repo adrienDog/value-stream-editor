@@ -5,6 +5,10 @@ function isEmpty(obj) {
   return Object.keys(obj).length === 0;
 }
 
+function hasChildren(obj) {
+  return obj._children && obj._children.length;
+}
+
 const scoreToColor = [
   'red',
   'red',
@@ -22,16 +26,31 @@ const color = (attributes) => {
   return scoreToColor[score];
 }
 
+const Small = ({children}) => (
+  <small style={{fontSize: '0.6em'}}>
+    {children}
+  </small>
+);
+
+function shouldShowExpandedView(nodeData) {
+  const attrs = nodeData.attributes;
+  return !hasChildren(nodeData) || !nodeData._collapsed && !isEmpty(attrs);
+}
+
 class NodeLabel extends React.PureComponent {
   render() {
-    const {className, nodeData} = this.props
+    const {className, nodeData} = this.props;
+    const attrs = nodeData.attributes;
     return (
       <div className={className}>
-        <h4 style={{ fontSize: '1.3vmin', padding: '0', margin: '0', color: color(nodeData.attributes)}}>{nodeData.name}</h4>
-        { !nodeData._collapsed && !isEmpty(nodeData.attributes) &&
-          <pre>
-            {JSON.stringify(nodeData.attributes, null, 2)}
-          </pre>
+        <h4 style={{ fontSize: '1.3vmin', padding: '0', margin: '0', color: color(attrs)}}>{nodeData.name}</h4>
+        { shouldShowExpandedView(nodeData) &&
+          <p style={{margin: 0, padding: 0}}>
+            {attrs.notes && <Small>{attrs.notes}</Small>}
+            {attrs.links && 
+              <Small>{attrs.links.map((l,i) => <a key={i} href={l.url}>{l.label}</a>)}</Small>
+            }
+          </p>
         }
       </div>
     )
