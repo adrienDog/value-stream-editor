@@ -11,7 +11,7 @@ export default class Intro extends Component {
       </p>
       <p>
         The tree view is fed by the JSON editor underneath. Any local change is saved in your browser so reloading is safe.
-        You can also import and export the data as JSON.
+        You can restore the default data or import/export the data as JSON.
       </p>
     </div>)
   }

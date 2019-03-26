@@ -17,6 +17,11 @@ class ValueStreamStore {
     localStorage.setItem(subKeys.rawJson, raw);
   }
 
+  async clear() {
+    console.log('removing item', subKeys.rawJson);
+    localStorage.removeItem(subKeys.rawJson)
+  }
+
   async get() {
     const raw = localStorage.getItem(subKeys.rawJson);
     if (raw === 'undefined') return undefined;

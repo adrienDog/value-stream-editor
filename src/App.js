@@ -31,9 +31,20 @@ class App extends Component {
         this.setState({ jsonData });
       } else {
         console.info('using default jsonData');
-        this.setState({ jsonData: DEFAULT_JSON });
+        this.setDefaultJsonData();
       }
     });
+  }
+
+  setDefaultJsonData() {
+    this.setState({ jsonData: DEFAULT_JSON });
+  }
+
+  async restoreDefaultJsonIfConfirmed() {
+    if (window.confirm('Are you sure you want to reset the data?')) {
+      await valueStreamStore.clear();
+      this.setDefaultJsonData();
+    }
   }
 
   onTreeDepthChange(value) {
@@ -92,9 +103,14 @@ class App extends Component {
                 padding: '10px 0'
               }}
             >
-              <h2 style={{ flex: '1' }}>
-                Edit JSON
-              </h2>
+              <div style={{ flex: '1' }}>
+                <h2>
+                  EDIT
+                </h2>
+                <button type="button" onClick={() => this.restoreDefaultJsonIfConfirmed()}>
+                  Restore default
+                </button>
+              </div>
               <div style={{ flex: '1' }}>
                 <h3>Import .json</h3>
                 <ImportJson onFileReady={(f) => this.handleJsonImport(f)}/>
