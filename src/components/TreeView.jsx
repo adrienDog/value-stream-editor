@@ -34,7 +34,7 @@ const Small = ({children}) => (
 
 function shouldShowExpandedView(nodeData) {
   const attrs = nodeData.attributes;
-  return !hasChildren(nodeData) || !nodeData._collapsed && !isEmpty(attrs);
+  return !hasChildren(nodeData) || (!nodeData._collapsed && !isEmpty(attrs));
 }
 
 class NodeLabel extends React.PureComponent {
